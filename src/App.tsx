@@ -1,14 +1,53 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import { Routing } from './router'
 
-function App() {
+// function App() {
+
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       <main>
+//         <Routing />
+//       </main>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React, { useState, useEffect } from "react";
+import { Loader } from './components'
+
+const App: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay before loading the app
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="App">
-      <h1 className="text-4xl font-bold">
-        Welcome to DYD
-      </h1>
-    </div>
-  )
-}
+    <>
+      {loading ? (
+        <Loader message="Welcome to church..." />
+      ) : (
+        <div>
+          <div className="App">
+            <Navbar />
+            <main>
+              <Routing />
+            </main>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
-export default App
+export default App;
+
