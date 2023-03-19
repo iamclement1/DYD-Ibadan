@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutDiocese = () => {
     return (
-        <div>AboutDiocese</div>
+        <div className="text-4xl font-bold text-center">AboutDiocese</div>
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PrayerRequest = () => {
     return (
-        <div>PrayerRequest</div>
+        <div className='text-4xl font-bold text-center'>PrayerRequest</div>
     )
 }
 
