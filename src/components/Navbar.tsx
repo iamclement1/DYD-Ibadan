@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
     return (
         <section>
-            <nav className="bg-gray-100 w-full mb-5 ">
+            <nav className="bg-gray-100 w-full">
                 <div className="flex items-center text-sm justify-between md:pr-20">
                     <div className="p-3 md:w-auto w-full flex justify-between items-center">
                         <h1 className="md:ml-12 
