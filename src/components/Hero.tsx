@@ -1,4 +1,4 @@
-import image from '../assets/bg.jpg'
+import image from '../assets/Placeholder.png'
 
 const Hero: React.FC = () => {
     return (
