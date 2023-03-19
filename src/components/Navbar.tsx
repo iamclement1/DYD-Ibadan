@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                                             exit={{ opacity: 0, scale: 0.6 }}
                                             className='flex flex-col w-[20rem] bg-white border border-black
                                             rounded-md p-4 shadow-xl absolute top-14 left-0'
-                                            onClick={()=> setIsMenu(false)}>
+                                            onClick={() => setIsMenu(false)}>
                                             <Link to="/about" className="p-2 hover:bg-gray-100
                                             rounded-sm">
                                                 About Us
@@ -113,22 +113,47 @@ const Navbar: React.FC = () => {
                         </div>
                         <li className="">
                             <Link to="/" className="py-3 hover:text-[#5C407F] px-12 inline-block">
-                                about dyc 22
+                                Home
                             </Link>
                         </li>
+                        <div className="relative">
+                            <motion.div
+                                whileTap={{ scale: 0.75 }}
+                                className="flex items-center space-x-5">
+                                <p className="py-2 px-12 mr-8 cursor-pointer"
+                                    onClick={() => setIsMenu(true)}>
+                                    Information Center
+                                </p>
+                            </motion.div>
+                            {
+                                isMenu && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.6 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.6 }}
+                                        className='flex flex-col w-[20rem] bg-white border border-black
+                                            rounded-md p-4 shadow-xl absolute top-6 left-0'
+                                        onClick={() => setIsMenu(false)}>
+                                        <Link to="/about" className="p-2 hover:bg-gray-100
+                                            rounded-sm">
+                                            About Us
+                                        </Link>
+                                        <Link to="/about-diocese" className="p-2 hover:bg-gray-100
+                                            rounded-sm">
+                                            About the Diocese
+                                        </Link>
+                                        <Link to="/prayer-request" className="p-2 hover:bg-gray-100
+                                            rounded-sm">
+                                            Prayer Request
+                                        </Link>
+                                    </motion.div>
+                                )
+                            }
+
+                        </div>
                         <li className="">
                             <Link to="/" className="py-3 hover:text-[#5C407F] px-12 inline-block">
-                                support us
-                            </Link>
-                        </li>
-                        <li className="">
-                            <Link to="/" className="py-3 hover:text-[#5C407F] px-12 inline-block">
-                                about dyd
-                            </Link>
-                        </li>
-                        <li className="">
-                            <Link to="/" className="py-3 hover:text-[#5C407F] px-12 inline-block">
-                                meet our ministers
+                                Events
                             </Link>
                         </li>
                         <button
