@@ -37,7 +37,7 @@ const App: React.FC = () => {
         <Loader message="Welcome to church..." />
       ) : (
         <div>
-          <div className="App">
+          <div className="App font-sans">
             <Navbar />
             <main>
               <Routing />
