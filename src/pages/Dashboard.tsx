@@ -25,8 +25,8 @@ const Dashboard: React.FC = () => {
             </section>
             {/* Livestreaming */}
             <section>
-                <div className="flex justify-between items-center p-16">
-                    <div className='w-3/6'>
+                <div className="md:flex lg:flex block justify-between items-center md:p-16 p-2">
+                    <div className='md:w-3/6 lg:w-3/6 w-full md:mb-0 mb-3'>
                         <h1 className='text-2xl text-black/70 mb-4'>
                             Livestreams
                         </h1>
@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
                             lorem Lorem ipsum dolor sit amet.?
                         </p>
 
-                        <div className='p-2 bg-[#333] flex items-center space-x-4 md:5/6 lg:w-4/6 xl:w-2/5 mt-4
+                        <div className='p-2 bg-[#333] flex items-center md:justify-start justify-center space-x-4 md:5/6 lg:w-4/6 xl:w-2/5 mt-4
                         cursor-pointer rounded-sm px-6'>
                             <p className='bg-[#BC31EA] h-8 w-8 rounded-full 
                             flex items-center justify-center text-white border border-white'>
@@ -58,12 +58,12 @@ const Dashboard: React.FC = () => {
 
             {/* Giving */}
             <section>
-                <div className="flex justify-between items-center p-16 bg-[#F2F2F2]">
+                <div className="md:flex lg:flex block justify-between items-center lg:p-16 p-2 bg-[#F2F2F2]">
                     <div className=''>
                         <img src={Placeholder} alt="placeholder-img"
                             className="w-96 h-96" />
                     </div>
-                    <div className='w-3/6'>
+                    <div className='md:w-3/6 lg:w-3/6 w-full'>
                         <h1 className='text-2xl text-black/70 mb-4'>
                             Giving...
                         </h1>

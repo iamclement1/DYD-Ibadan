@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
                     <div>
-                        <div className=" mt-12 px-2 text-3xl flex space-x-4 items-center">
+                        <div className=" mt-12 px-2 text-3xl flex space-x-4 items-center md:mb-0 mb-8">
                             <AiOutlineYoutube className="cursor-pointer"
                                 onClick={() => window.location.href = "https://www.youtube.com/channel/UCCALjWw_P1zr39vo4qnP94g"} />
                             < AiOutlineInstagram className="cursor-pointer"
