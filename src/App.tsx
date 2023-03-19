@@ -17,7 +17,7 @@ import { Routing } from './router'
 // export default App
 
 import React, { useState, useEffect } from "react";
-import { Loader } from './components'
+import { Footer, Loader } from './components'
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -42,6 +42,7 @@ const App: React.FC = () => {
             <main>
               <Routing />
             </main>
+            <Footer />
           </div>
         </div>
       )}
