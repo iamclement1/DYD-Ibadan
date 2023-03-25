@@ -1,4 +1,5 @@
 
+import { Fade } from 'react-awesome-reveal';
 import Placeholder from '../assets/Placeholder.png';
 import { ExRole } from '../utils/executive';
 const OurExecutives = () => {
@@ -38,22 +39,25 @@ const OurExecutives = () => {
                         xl:grid xl:grid-cols-4">
                         {ExRole && ExRole.map((exco, index) => {
                             return (
-                                <div key={index}
-                                    className=' items-center rounded-lg p-4 mt-4'>
-                                    <div className='flex flex-col items-center'>
-                                        <img src={exco.img} alt="image-header"
-                                            className='w-full' />
-                                        <div id="name"
-                                            className='pt-6 flex flex-col items-center '>
-                                            <p className='text-black/75 md:text-2xl text-xs font-bold'>
-                                                {exco.name}
-                                            </p>
-                                            <span className='font-semibold text-gray-500 md:text-xl text-xs'>
-                                                {exco.office}
-                                            </span>
+                                <Fade direction="up" triggerOnce cascade>
+                                    <div key={index}
+                                        className=' items-center rounded-lg p-4 mt-4'>
+
+                                        <div className='flex flex-col items-center'>
+                                            <img src={exco.img} alt="image-header"
+                                                className='w-full' />
+                                            <div id="name"
+                                                className='pt-6 flex flex-col items-center '>
+                                                <p className='text-black/75 md:text-2xl text-xs font-bold'>
+                                                    {exco.name}
+                                                </p>
+                                                <span className='font-semibold text-gray-500 md:text-xl text-xs'>
+                                                    {exco.office}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Fade>
                             )
                         })}
                     </div>
