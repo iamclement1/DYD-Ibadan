@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     return (
         <section>
             <nav className="bg-gray-100 w-full">
-                <div className="flex items-center text-sm justify-between md:pr-20">
+                <div className="flex items-center text-sm justify-between md:pr-20 text-black/80">
                     <div className="p-3 md:w-auto w-full flex justify-between items-center">
                         <h1 className="md:ml-12 
                         md:w-full">
@@ -42,16 +42,16 @@ const Navbar: React.FC = () => {
                         initial={{ opacity: 0, x: 200 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 200 }}
-                        className="md:flex flex-row  font-semibold hidden items-center md:mr-8 space-x-8">
+                        className="md:flex flex-row  font-semibold hidden items-center md:mr-14 space-x-8">
                         <li className="flex">
-                            <Link to="/" className="py-7 px-3 inline-block md:mr-8 hover:text-[#5C407F]">
+                            <Link to="/" className="py-7 px-3 inline-block md:mr-14 hover:text-[#5C407F]">
                                 Home
                             </Link>
                             <div className="relative">
                                 <motion.div
                                     whileTap={{ scale: 0.75 }}
                                     className="flex items-center space-x-5">
-                                    <p className="py-7 md:mr-8 cursor-pointer"
+                                    <p className="py-7 md:mr-14 cursor-pointer"
                                         onClick={() => setIsMenu(true)}>
                                         Information Center
                                     </p>
@@ -87,8 +87,8 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <button
-                            className="bg-gray-600 hover:bg-blue-700 text-white font-bold py-2 
-                            px-4 rounded"
+                            className=" border border-black/70 text-gray-600 py-4 
+                            px-10 rounded"
                             onClick={handleOpenModal}
                         >
                             Give
@@ -97,6 +97,8 @@ const Navbar: React.FC = () => {
                             <p>This is the body of the modal.</p>
                         </Modal>
                     </motion.ul>
+
+                    {/* mobile screen  */}
                     <ul className={`
                     md:hidden bg-white fixed uppercase w-full top-0 overflow-y-auto bottom-0 py-24 md:px-4
                     duration-500 ${open ? "left-0" : "left-[-100%]"}`}>
